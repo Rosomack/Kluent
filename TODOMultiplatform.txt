@@ -1,0 +1,7 @@
+Kotlin JVM
+==========
+Unsure about Exceptions
+
+Basic:
+	infix fun Any?.`should be instance of`(className: Class<*>) = this.shouldBeInstanceOf(className)
+	infix fun Any?.`should not be instance of`(className: Class<*>) = this.shouldNotBeInstanceOf(className)
