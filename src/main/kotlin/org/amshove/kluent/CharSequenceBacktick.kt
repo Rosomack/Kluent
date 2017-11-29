@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package org.amshove.kluent
 
 infix fun CharSequence.`should start with`(theOther: CharSequence) = this.shouldStartWith(theOther)
@@ -14,7 +16,7 @@ infix fun CharSequence.`should not contain any`(things: Iterable<CharSequence>) 
 
 infix fun CharSequence.`should match`(regex: String) = this.shouldMatch(regex)
 
-infix fun CharSequence.`should match`(regex: Regex) = this.shouldMatch(regex)
+infix fun CharSequence.`should match`(regex: Regex) = this.shouldMatch(regex.toString())
 
 fun CharSequence.`should be empty`() = this.shouldBeEmpty()
 
@@ -42,7 +44,7 @@ infix fun CharSequence.`should not contain`(theOther: CharSequence) = this.shoul
 
 infix fun CharSequence.`should not match`(regex: String) = this.shouldNotMatch(regex)
 
-infix fun CharSequence.`should not match`(regex: Regex) = this.shouldNotMatch(regex)
+infix fun CharSequence.`should not match`(regex: Regex) = this.shouldNotMatch(regex.toString())
 
 fun CharSequence.`should not be empty`() = this.shouldNotBeEmpty()
 

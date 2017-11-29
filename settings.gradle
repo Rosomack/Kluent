@@ -1,2 +1,4 @@
 rootProject.name = 'kluent'
 
+// TODO: Backtick doesn't work on JavaScript
+include 'kluent-jvm'//, 'kluent-js'

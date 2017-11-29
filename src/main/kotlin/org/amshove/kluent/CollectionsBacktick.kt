@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package org.amshove.kluent
 
 infix fun <T> Array<T>.`should contain`(theThing: T) = this.shouldContain(theThing)
