@@ -1,0 +1,10 @@
+apply plugin: 'kotlin-platform-common'
+
+dependencies {
+    compile libraries.kotlin_stdlib_common
+    compile libraries.kotlin_test_common
+    compile libraries.kotlin_reflect
+
+    testCompile libraries.kotlin_test_common
+    testCompile libraries.kotlin_test_annotations_common
+}

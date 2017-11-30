@@ -1,0 +1,9 @@
+apply plugin: 'kotlin-platform-js'
+
+dependencies {
+    expectedBy project(':common')
+    compile libraries.kotlin_stdlib_js
+    compile libraries.kotlin_test_js
+    compile libraries.kotlin_reflect
+    testCompile libraries.kotlin_test_js
+}
