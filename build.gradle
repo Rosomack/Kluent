@@ -1,4 +1,3 @@
-
 buildscript {
     ext.kotlin_version = '1.2.0'
 
@@ -23,10 +22,29 @@ allprojects {
     }
 }
 
+ext {
+    libraries = [
+            // Common
+            kotlin_stdlib_common          : "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version",
+            kotlin_test_common            : "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version",
+            kotlin_test_annotations_common: "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version",
+            kotlin_reflect                : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
+
+            // JVM
+            kotlin_stdlib_jvm             : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlin_test_jvm               : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+
+            // JavaScript
+            kotlin_stdlib_js              : "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version",
+            kotlin_test_js                : "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version",
+    ]
+}
+
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+    compile libraries.kotlin_stdlib_common
+    compile libraries.kotlin_test_common
+    compile libraries.kotlin_reflect
+
+    testCompile libraries.kotlin_test_common
+    testCompile libraries.kotlin_test_annotations_common
 }

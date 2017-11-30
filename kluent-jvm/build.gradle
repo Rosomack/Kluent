@@ -21,11 +21,9 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
     expectedBy project(":")
-    testCompile "junit:junit:4.12"
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    compile libraries.kotlin_stdlib_jvm
+    compile libraries.kotlin_test_jvm
+    compile libraries.kotlin_reflect
+    testCompile libraries.kotlin_test_jvm
 }
