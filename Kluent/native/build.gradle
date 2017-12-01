@@ -1,0 +1,9 @@
+apply plugin: 'konan'
+
+
+konanArtifacts {
+    program('native') {
+        srcFiles fileTree('../common/src/main/kotlin')
+        srcFiles fileTree('src/main/kotlin')
+    }
+}

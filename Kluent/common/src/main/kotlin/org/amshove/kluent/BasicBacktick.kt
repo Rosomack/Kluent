@@ -8,9 +8,11 @@ infix fun Any?.`should equal`(theOther: Any?) = this.shouldEqual(theOther)
 
 infix fun Any?.`should not equal`(theOther: Any?) = this.shouldNotEqual(theOther)
 
-infix fun Any?.`should be`(theOther: Any?) = this.shouldBe(theOther)
+// TODO: Kotlin native doesn't know about assertSame yet
+//infix fun Any?.`should be`(theOther: Any?) = this.shouldBe(theOther)
 
-infix fun Any?.`should not be`(theOther: Any?) = this.shouldNotBe(theOther)
+// TODO: Kotlin native doesn't know about assertNotSame yet
+//infix fun Any?.`should not be`(theOther: Any?) = this.shouldNotBe(theOther)
 
 infix fun Any?.`should be instance of`(className: KClass<*>) = this.shouldBeInstanceOf(className)
 

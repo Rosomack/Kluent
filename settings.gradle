@@ -1,7 +1,8 @@
 rootProject.name = 'kluent'
 
-include ':common', ':jvm'//, ':js'
+include ':common', ':jvm', ':native'//, ':js'
 
 project(':common').projectDir = file('./Kluent/common')
 project(':jvm').projectDir = file('./Kluent/jvm')
+project(':native').projectDir = file('./Kluent/native')
 //project (':js').projectDir = file('./Kluent/js')

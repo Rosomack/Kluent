@@ -1,6 +1,5 @@
 package org.amshove.kluent.basic
 
-import org.amshove.kluent.shouldNotBe
 import kotlin.test.assertFails
 
 // TODO: Port tests

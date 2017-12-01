@@ -10,3 +10,5 @@ out/
 bin/
 .settings/
 local.properties
+cmake-build-debug/
+cmake-build-release/
