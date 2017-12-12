@@ -2,6 +2,7 @@
 
 package org.amshove.kluent
 
+/* TODO: Removed backticks to test JavaScript
 infix fun CharSequence.`should start with`(theOther: CharSequence) = this.shouldStartWith(theOther)
 
 infix fun CharSequence.`should end with`(theOther: CharSequence) = this.shouldEndWith(theOther)
@@ -53,3 +54,4 @@ fun CharSequence?.`should not be null or empty`() = this.shouldNotBeNullOrEmpty(
 fun CharSequence.`should not be blank`() = this.shouldNotBeBlank()
 
 fun CharSequence?.`should not be null or blank`() = this.shouldNotBeNullOrBlank()
+*/

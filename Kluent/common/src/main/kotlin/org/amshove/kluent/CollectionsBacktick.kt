@@ -2,6 +2,7 @@
 
 package org.amshove.kluent
 
+/* TODO: Removed backticks to test JavaScript
 infix fun <T> Array<T>.`should contain`(theThing: T) = this.shouldContain(theThing)
 
 infix fun <T> Array<T>.`should contain some`(things: Array<T>) = this.shouldContainSome(things)
@@ -241,3 +242,4 @@ infix fun <T> Any?.`should be in`(iterable: Iterable<T>) = this.shouldBeIn(itera
 infix fun <T> Any?.`should not be in`(iterable: Iterable<T>) = this.shouldNotBeIn(iterable)
 
 infix fun <T> Any?.`should be in`(array: Array<T>) = this.shouldBeIn(array)
+*/

@@ -1,17 +1,18 @@
 @file:Suppress("unused")
 
 package org.amshove.kluent
+import org.amshove.kluent.internal.getPlatformspecificName
 import kotlin.reflect.KClass
 import kotlin.test.fail
 
 infix fun <T : Throwable> (() -> Any?).shouldThrow(expectedException: KClass<T>): ExceptionResult<T> {
     try {
         this.invoke()
-        fail("${expectedException::class.qualifiedName} was expected to be thrown, but wasn't")
+        fail("${expectedException::class.getPlatformspecificName()} was expected to be thrown, but wasn't")
     } catch (e: Throwable) {
         @Suppress("UNCHECKED_CAST")
         if (e.isA(expectedException)) return ExceptionResult(e as T)
-        else throw fail("Expected ${expectedException.qualifiedName} to be thrown, but got ${e::class.qualifiedName}")
+        else throw fail("Expected ${expectedException.getPlatformspecificName()} to be thrown, but got ${e::class.getPlatformspecificName()}")
     }
 }
 
@@ -20,17 +21,17 @@ infix fun <T : Throwable> (() -> Any?).shouldNotThrow(expectedException: KClass<
         this.invoke()
     } catch (e: Throwable) {
         if (expectedException.isAnyException()) {
-            fail("Expected no Exception to be thrown, but got ${e::class.qualifiedName}")
+            fail("Expected no Exception to be thrown, but got ${e::class.getPlatformspecificName()}")
         }
         if (e.isA(expectedException))
-            fail("Expected ${expectedException.qualifiedName} to not be thrown")
+            fail("Expected ${expectedException.getPlatformspecificName()} to not be thrown")
     }
 }
 
 infix fun <T : Throwable> (() -> Any?).shouldThrow(expectedException: T) {
     try {
         this.invoke()
-        fail("${expectedException::class.qualifiedName} was expected to be thrown, but wasn't")
+        fail("${expectedException::class.getPlatformspecificName()} was expected to be thrown, but wasn't")
     } catch (e: Throwable) {
         if (!e.equals(expectedException)) {
             fail("Expected $expectedException to be thrown, but got $e")
@@ -47,7 +48,7 @@ infix fun <T : Throwable> (() -> Any).shouldNotThrowTheException(expectedExcepti
         return NotThrowExceptionResult(noException)
     } catch (e: Throwable) {
         if (expectedException.isAnyException()) {
-            fail("Expected no Exception to be thrown, but got ${e::class.qualifiedName}")
+            fail("Expected no Exception to be thrown, but got ${e::class.getPlatformspecificName()}")
         }
         return NotThrowExceptionResult(e)
     }

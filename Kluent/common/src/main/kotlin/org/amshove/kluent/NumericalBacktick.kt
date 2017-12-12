@@ -2,6 +2,7 @@
 
 package org.amshove.kluent
 
+/* TODO: Removed backticks to test JavaScript
 @Deprecated("Use `should be equal to`", ReplaceWith("this.`should be equal to`(theOther)"))
 infix fun Boolean.`should equal to`(theOther: Boolean) = this.`should be equal to`(theOther)
 
@@ -231,3 +232,4 @@ infix fun Short.`should not be in range`(range: IntRange) = this.shouldNotBeInRa
 infix fun Int.`should not be in range`(range: IntRange) = this.shouldNotBeInRange(range)
 
 infix fun Long.`should not be in range`(range: LongRange) = this.shouldNotBeInRange(range)
+*/

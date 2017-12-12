@@ -1,5 +1,6 @@
 package org.amshove.kluent
 
+/* TODO: Removed backticks to test JavaScript
 import kotlin.reflect.KClass
 
 infix fun <T : Throwable> (() -> Any?).`should throw`(expectedException: KClass<T>) = this.shouldThrow(expectedException)
@@ -20,3 +21,4 @@ infix fun <T : Throwable> ExceptionResult<T>.`with cause`(expectedCause: KClass<
 infix fun NotThrowExceptionResult.`with cause`(expectedCause: KClass<out Throwable>) = this.withCause(expectedCause)
 
 infix fun <T : Throwable> (() -> Any?).`should throw`(expectedException: T) = this.shouldThrow(expectedException)
+        */

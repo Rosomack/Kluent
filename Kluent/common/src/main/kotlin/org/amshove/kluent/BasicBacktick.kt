@@ -2,6 +2,7 @@
 
 package org.amshove.kluent
 
+/* TODO: Removed backticks to test JavaScript
 import kotlin.reflect.KClass
 
 infix fun Any?.`should equal`(theOther: Any?) = this.shouldEqual(theOther)
@@ -29,3 +30,4 @@ fun Boolean.`should be false`() = this.shouldBeFalse()
 fun Boolean.`should not be true`() = this.shouldBeFalse()
 
 fun Boolean.`should not be false`() = this.shouldBeTrue()
+*/

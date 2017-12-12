@@ -12,3 +12,4 @@ bin/
 local.properties
 cmake-build-debug/
 cmake-build-release/
+node_modules/
