@@ -2,8 +2,14 @@ apply plugin: 'konan'
 
 
 konanArtifacts {
+    // Should be used with expectedBy somewhere
+    library('common') {
+        srcFiles fileTree('../common/src/main')
+    }
     program('native') {
-        srcFiles fileTree('../common/src/main/kotlin')
+        libraries {
+            klib 'common'
+        }
         srcFiles fileTree('src/main/kotlin')
     }
 }
